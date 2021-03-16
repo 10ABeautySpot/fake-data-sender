@@ -1,6 +1,10 @@
 const fetch = require("node-fetch");
 const post = async (url, data) => {
-    await fetch(url, {method: 'POST', body: data}).then(res => {
+    await fetch(url, {
+        method: 'POST',
+        body: data,
+        headers:{"content-type":"application/json"}
+    }).then(res => {
         console.log("----res",res);
         return res.json();
     }).catch((err) => {
