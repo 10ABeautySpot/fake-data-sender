@@ -1,0 +1,23 @@
+{
+  "name": "fake-data-sender",
+  "version": "1.0.0",
+  "description": "### 假数据模拟生成器 - 基于 json schema& 自定义 业务规则快速生成随机的符合期望的假数据",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/10ABeautySpot/fake-data-sender.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/10ABeautySpot/fake-data-sender/issues"
+  },
+  "homepage": "https://github.com/10ABeautySpot/fake-data-sender#readme",
+  "dependencies": {
+    "json-schema-faker": "^0.5.0-rcv.33",
+    "node-fetch": "^2.6.1"
+  }
+}
