@@ -1,6 +1,4 @@
-const devicesIds=[
-    "00001",
-    "00002",
-    "00003"
-]
+const ids=Array.from({length: 1000}, (x,i) => (10001+i)+"");
+console.log("ids",ids,ids[999]);
+const devicesIds=ids;
 module.exports={devicesIds}
