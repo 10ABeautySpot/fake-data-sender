@@ -1,5 +1,6 @@
 const fetch = require("node-fetch");
 const post = async (url, data) => {
+    console.log("data",data);
     await fetch(url, {
         method: 'POST',
         body: data,

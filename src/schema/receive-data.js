@@ -38,9 +38,9 @@ const receiveDataSchema={
                     "value"
                 ]
             },
-            "minItems": 0,
+            "minItems": 6,
             "uniqueItems": true,
-            "maxItems": 9
+            "maxItems": 6
         },
         "monitorEquipmentNumber": {
             "type": "string",
