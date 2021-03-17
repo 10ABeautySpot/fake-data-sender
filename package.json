@@ -18,6 +18,7 @@
   "homepage": "https://github.com/10ABeautySpot/fake-data-sender#readme",
   "dependencies": {
     "json-schema-faker": "^0.5.0-rcv.33",
-    "node-fetch": "^2.6.1"
+    "node-fetch": "^2.6.1",
+    "node-schedule": "^2.0.0"
   }
 }

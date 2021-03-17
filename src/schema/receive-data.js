@@ -6,6 +6,14 @@ const receiveDataSchema={
             "type": "string",
             "pattern": "2021-0[1-9]-[0-2][1-9] [0-1][1-9]:00:00"
         },
+        "dataType": {
+            "type": "number",
+            "enum": [
+                0,//min
+                1,//hour,
+                2//day
+            ]
+        },
         "items": {
             "type": "array",
             "items": {
