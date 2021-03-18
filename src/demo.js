@@ -8,7 +8,7 @@ const {devicesIds} = require("./config/devices");
 const jobProcess = (dataType) => {
     devicesIds.forEach(devicesId => {
         send({
-            url: "127.0.0.1:3000/data-receiver/api/dataReceiver/monitorData/receive",
+            url: "http://localhost:9999/api/dataReceiver/monitorData/receive",
             schema: receiveDataSchema,
             times: 1,
             appendData: {devicesId, dataType}
