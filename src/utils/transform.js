@@ -18,14 +18,14 @@ const toDayDateString = function (date) {
 const dateMethods=[toMinDateString,toHourDateString,toDayDateString]
 
 
-const adjustSourceData = (data,{devicesId,dataType}) => {
-    const recordDataTime=dateMethods[dataType](new Date());
+const adjustSourceData = (data,{devicesId,dateType}) => {
+    const recordDataTime=dateMethods[dateType](new Date());
     data.items.forEach((item,index) => {
         item.code =codeList[index];
         item.dateTime=recordDataTime;
     })
     data.dateTime=recordDataTime;
-    data.dataType=dataType;
+    data.dateType=dateType;
     data.monitorEquipmentNumber=devicesId;
 
 }

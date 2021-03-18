@@ -5,13 +5,13 @@ const {dateType} = require("./config/date-type");
 const {devicesIds} = require("./config/devices");
 
 
-const jobProcess = (dataType) => {
+const jobProcess = (dateType) => {
     devicesIds.forEach(devicesId => {
         send({
             url: "http://localhost:9999/api/dataReceiver/monitorData/receive",
             schema: receiveDataSchema,
             times: 1,
-            appendData: {devicesId, dataType}
+            appendData: {devicesId, dateType}
         });
     })
 }
