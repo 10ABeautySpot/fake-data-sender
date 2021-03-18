@@ -1,4 +1,4 @@
-const codeList = ["no2", "co", "pm10", "pm2.5", "o3", "so2"];
+const codeList = ["no2", "co", "pm10", "pm2p5", "o3", "so2"];
 const fixPlace = (n) => {
     return n >= 10 ? n : "0" + n;
 }

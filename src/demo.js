@@ -1,7 +1,7 @@
 const {send} = require("./sender/receive-data-sender");
 const {receiveDataSchema} = require("./schema/receive-data");
 const schedule = require('node-schedule');
-const {dataType} = require("./config/data-type");
+const {dateType} = require("./config/date-type");
 const {devicesIds} = require("./config/devices");
 
 
@@ -16,16 +16,16 @@ const jobProcess = (dataType) => {
     })
 }
 
-const FiveMinJob = schedule.scheduleJob('0 0,5,10,15,20,25,30,35,40,45,50,55 * * * ?', function () {
-    jobProcess(dataType.MIN);
+const PerMinJob = schedule.scheduleJob('0 * * * * ?', function () {
+    jobProcess(dateType.MIN);
 });
 
 const HourJob = schedule.scheduleJob('0 0 * * * ?', function () {
-    jobProcess(dataType.HOUR);
+    jobProcess(dateType.HOUR);
 });
 
 const DayJob = schedule.scheduleJob('0 0 0 * * ?', function () {
-    jobProcess(dataType.DAY);
+    jobProcess(dateType.DAY);
 });
 
 

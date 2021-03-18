@@ -3,7 +3,7 @@ const post = async (url, data) => {
     console.log("data",data);
     await fetch(url, {
         method: 'POST',
-        body: data,
+        body: JSON.stringify(data),
         headers:{"content-type":"application/json"}
     }).then(res => {
         console.log("----res",res);
