@@ -1,8 +1,7 @@
 const dayjs = require("dayjs");
+var jsf = require('json-schema-faker');
+const {generatePollSchema} = require("../schema/pollute-enum");
 const codeList = ["no2", "co", "pm10", "pm2p5", "o3", "so2"];
-const fixPlace = (n) => {
-    return n >= 10 ? n : "0" + n;
-}
 
 const toMinDateString = function (date) {
     return dayjs(date).format('YYYY-MM-DD HH:mm:00');
@@ -21,7 +20,9 @@ const dateMethods=[toMinDateString,toHourDateString,toDayDateString]
 const adjustSourceData = (data,{devicesId,dateType}) => {
     const recordDataTime=dateMethods[dateType](new Date());
     data.items.forEach((item,index) => {
-        item.code =codeList[index];
+        let code = codeList[index];
+        item.value= jsf.generate(generatePollSchema(code)).value;
+        item.code =code;
         item.dateTime=recordDataTime;
     })
     data.dateTime=recordDataTime;
