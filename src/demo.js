@@ -28,10 +28,6 @@ const DayJob = schedule.scheduleJob('0 0 0 * * ?', function () {
     jobProcess(dateType.DAY);
 });
 
-
-/*
-手动执行使用
-jobProcess(dataType.MIN);
-jobProcess(dataType.HOUR);
-jobProcess(dataType.DAY);
- */
+// jobProcess(dateType.MIN);
+// jobProcess(dateType.HOUR);
+// jobProcess(dateType.DAY);

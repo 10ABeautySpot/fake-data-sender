@@ -1,12 +1,11 @@
 const fetch = require("node-fetch");
 const post = async (url, data) => {
-    console.log("data",data);
+    data = JSON.stringify(data);
     await fetch(url, {
         method: 'POST',
-        body: JSON.stringify(data),
+        body: data,
         headers:{"content-type":"application/json"}
     }).then(res => {
-        console.log("----res",res);
         return res.json();
     }).catch((err) => {
         console.log("post err", url);
