@@ -1,0 +1,9 @@
+apps:
+  - script: src/demo.js
+    name: 'demo'
+    watch: false
+    env:
+      NODE_ENV: development
+      HOST: 127.0.0.1
+      PORT: 9999
+

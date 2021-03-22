@@ -11,7 +11,7 @@ node src/demo.js
 
 - [pm2](https://pm2.keymetrics.io/docs/usage/quick-start/) 后台运行
 ```
-pm2 start src/demo.js
+pm2 start process.yml --env development
 ```
 
 ### 项目原理

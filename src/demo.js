@@ -1,6 +1,7 @@
 const {send} = require("./sender/receive-data-sender");
 const {receiveDataSchema} = require("./schema/receive-data");
 const schedule = require('node-schedule');
+const {host,port} = require("./config/env-config");
 const {dateType} = require("./config/date-type");
 const {devicesIds} = require("./config/devices");
 
@@ -8,7 +9,7 @@ const {devicesIds} = require("./config/devices");
 const jobProcess = (dateType) => {
     devicesIds.forEach(devicesId => {
         send({
-            url: "http://localhost:9999/api/dataReceiver/monitorData/receive",
+            url: `http://${host}:${port}/api/dataReceiver/monitorData/receive`,
             schema: receiveDataSchema,
             times: 1,
             appendData: {devicesId, dateType}
